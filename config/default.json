@@ -68,8 +68,7 @@
       "config": {}
     }
   },
-  "initialResources": [
-    {
+  "initialResources": [{
       "filters": ["vsf-newsletter-modal", "vsf-languages-modal", "vsf-layout-empty", "vsf-layout-minimal", "vsf-order-confirmation", "vsf-search-panel"],
       "type": "script",
       "onload": true,
@@ -663,19 +662,28 @@
     },
     "priceFilterKey": "final_price",
     "priceFilters": {
-      "ranges": [
-        { "from": 0, "to": 50 },
-        { "from": 50, "to": 100 },
-        { "from": 100, "to": 150 },
-        { "from": 150 }
+      "ranges": [{
+          "from": 0,
+          "to": 50
+        },
+        {
+          "from": 50,
+          "to": 100
+        },
+        {
+          "from": 100,
+          "to": 150
+        },
+        {
+          "from": 150
+        }
       ]
     }
   },
   "orders": {
     "directBackendSync": true,
     "endpoint": "/api/order",
-    "payment_methods_mapping": {
-    },
+    "payment_methods_mapping": {},
     "offline_orders": {
       "automatic_transmission_enabled": false,
       "notification": {
@@ -749,17 +757,15 @@
     "finalPriceIncludesTax": false
   },
   "shipping": {
-    "methods": [
-      {
-        "method_title": "DPD Courier",
-        "method_code": "flatrate",
-        "carrier_code": "flatrate",
-        "amount": 4,
-        "price_incl_tax": 5,
-        "default": true,
-        "offline": true
-      }
-    ]
+    "methods": [{
+      "method_title": "DPD Courier",
+      "method_code": "flatrate",
+      "carrier_code": "flatrate",
+      "amount": 4,
+      "price_incl_tax": 5,
+      "default": true,
+      "offline": true
+    }]
   },
   "syncTasks": {
     "disablePersistentTaskQueue": true
@@ -834,28 +840,28 @@
   "useZeroPriceProduct": true,
   "query": {
     "inspirations": {
-      "filter": [
-        {
-          "key": "category.name",
-          "value": { "eq": "Performance Fabrics" }
+      "filter": [{
+        "key": "category.name",
+        "value": {
+          "eq": "Performance Fabrics"
         }
-      ]
+      }]
     },
     "newProducts": {
-      "filter": [
-        {
-          "key": "new",
-          "value": { "eq": 1 }
+      "filter": [{
+        "key": "new",
+        "value": {
+          "eq": 1
         }
-      ]
+      }]
     },
     "bestSellers": {
-      "filter": [
-        {
-          "key": "category.name",
-          "value": { "eq": "Tees" }
+      "filter": [{
+        "key": "category.name",
+        "value": {
+          "eq": "Tees"
         }
-      ]
+      }]
     }
   },
   "urlModule": {
@@ -864,12 +870,12 @@
     "map_endpoint": "/api/url/map"
   },
   "fastly": {
-    "enabled":false
+    "enabled": false
   },
   "nginx": {
-    "enabled":false
+    "enabled": false
   },
   "varnish": {
-    "enabled":false
+    "enabled": false
   }
 }
